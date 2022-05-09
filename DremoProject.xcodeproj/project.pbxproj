@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13FDD0328296A93000EDA7A /* GorestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13FDD0128296A93000EDA7A /* GorestCell.swift */; };
+		B13FDD0428296A93000EDA7A /* GorestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13FDD0228296A93000EDA7A /* GorestCell.xib */; };
 		B1DB5BA228294C05008F214F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB5BA128294C05008F214F /* AppDelegate.swift */; };
 		B1DB5BA428294C05008F214F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB5BA328294C05008F214F /* SceneDelegate.swift */; };
 		B1DB5BA628294C05008F214F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB5BA528294C05008F214F /* ViewController.swift */; };
 		B1DB5BA928294C05008F214F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1DB5BA728294C05008F214F /* Main.storyboard */; };
 		B1DB5BAB28294C07008F214F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1DB5BAA28294C07008F214F /* Assets.xcassets */; };
 		B1DB5BAE28294C07008F214F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1DB5BAC28294C07008F214F /* LaunchScreen.storyboard */; };
+		B1DB5BB628294CBF008F214F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB5BB528294CBF008F214F /* ApiManager.swift */; };
+		B1DB5BB928294E5B008F214F /* Gorest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB5BB828294E5A008F214F /* Gorest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B13FDD0128296A93000EDA7A /* GorestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorestCell.swift; sourceTree = "<group>"; };
+		B13FDD0228296A93000EDA7A /* GorestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GorestCell.xib; sourceTree = "<group>"; };
 		B1DB5B9E28294C05008F214F /* DremoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DremoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DB5BA128294C05008F214F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1DB5BA328294C05008F214F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		B1DB5BAA28294C07008F214F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1DB5BAD28294C07008F214F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1DB5BAF28294C07008F214F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1DB5BB528294CBF008F214F /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		B1DB5BB828294E5A008F214F /* Gorest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gorest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B13FDD0028296A6C000EDA7A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B13FDD0128296A93000EDA7A /* GorestCell.swift */,
+				B13FDD0228296A93000EDA7A /* GorestCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B13FDD0528298887000EDA7A /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1DB5BA528294C05008F214F /* ViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 		B1DB5B9528294C05008F214F = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +81,34 @@
 		B1DB5BA028294C05008F214F /* DremoProject */ = {
 			isa = PBXGroup;
 			children = (
+				B13FDD0028296A6C000EDA7A /* Cell */,
+				B1DB5BBA28294F26008F214F /* ModelViewModel */,
+				B1DB5BB728294E13008F214F /* DataModel */,
+				B13FDD0528298887000EDA7A /* MainViewController */,
 				B1DB5BA128294C05008F214F /* AppDelegate.swift */,
 				B1DB5BA328294C05008F214F /* SceneDelegate.swift */,
-				B1DB5BA528294C05008F214F /* ViewController.swift */,
 				B1DB5BA728294C05008F214F /* Main.storyboard */,
 				B1DB5BAA28294C07008F214F /* Assets.xcassets */,
 				B1DB5BAC28294C07008F214F /* LaunchScreen.storyboard */,
 				B1DB5BAF28294C07008F214F /* Info.plist */,
 			);
 			path = DremoProject;
+			sourceTree = "<group>";
+		};
+		B1DB5BB728294E13008F214F /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1DB5BB828294E5A008F214F /* Gorest.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		B1DB5BBA28294F26008F214F /* ModelViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1DB5BB528294CBF008F214F /* ApiManager.swift */,
+			);
+			path = ModelViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +172,7 @@
 				B1DB5BAE28294C07008F214F /* LaunchScreen.storyboard in Resources */,
 				B1DB5BAB28294C07008F214F /* Assets.xcassets in Resources */,
 				B1DB5BA928294C05008F214F /* Main.storyboard in Resources */,
+				B13FDD0428296A93000EDA7A /* GorestCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DB5BB628294CBF008F214F /* ApiManager.swift in Sources */,
 				B1DB5BA628294C05008F214F /* ViewController.swift in Sources */,
 				B1DB5BA228294C05008F214F /* AppDelegate.swift in Sources */,
+				B13FDD0328296A93000EDA7A /* GorestCell.swift in Sources */,
 				B1DB5BA428294C05008F214F /* SceneDelegate.swift in Sources */,
+				B1DB5BB928294E5B008F214F /* Gorest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
